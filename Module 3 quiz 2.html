@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Iterators & Comparators Quiz</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .question-block {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .options-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .options-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .options-list li:hover {
+            background-color: #ecf0f1;
+        }
+        .options-list input[type="radio"] {
+            margin-right: 10px;
+        }
+        #submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #27ae60;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #submit-btn:hover {
+            background-color: #229954;
+        }
+        
+        /* Styles for showing results */
+        .correct {
+            background-color: #d4edda;
+            border-left: 5px solid #28a745;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            border-left: 5px solid #dc3545;
+        }
+        .correct-answer-text {
+            font-weight: bold;
+            color: #155724;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>Java Iterators, Comparable, and Comparators Quiz</h1>
+
+        <!-- Easy Level -->
+        <h2>Easy Level</h2>
+        <div id="q1" class="question-block"><p class="question-text">1. Which interface must a class implement to define its own natural sorting order?</p><ul class="options-list"><li><label><input type="radio" name="q1" value="a"> `java.util.Iterator`</label></li><li><label><input type="radio" name="q1" value="b"> `java.lang.Comparable`</label></li><li><label><input type="radio" name="q1" value="c"> `java.util.Comparator`</label></li><li><label><input type="radio" name="q1" value="d"> `java.lang.Iterable`</label></li></ul></div>
+        <div id="q2" class="question-block"><p class="question-text">2. What is the main purpose of the `Iterator` interface?</p><ul class="options-list"><li><label><input type="radio" name="q2" value="a"> To define multiple sorting orders for a class.</label></li><li><label><input type="radio" name="q2" value="b"> To allow an object to be the target of the "for-each" loop.</label></li><li><label><input type="radio" name="q2" value="c"> To provide a uniform way to traverse elements in a collection.</label></li><li><label><input type="radio" name="q2" value="d"> To compare two objects for equality.</label></li></ul></div>
+        <div id="q3" class="question-block"><p class="question-text">3. Which method is NOT part of the `Iterator` interface?</p><ul class="options-list"><li><label><input type="radio" name="q3" value="a"> `hasNext()`</label></li><li><label><input type="radio" name="q3" value="b"> `next()`</label></li><li><label><input type="radio" name="q3" value="c"> `remove()`</label></li><li><label><input type="radio" name="q3" value="d"> `get()`</label></li></ul></div>
+        <div id="q4" class="question-block"><p class="question-text">4. If you want to sort a list of objects using a custom sorting logic without modifying the object's class, you should use:</p><ul class="options-list"><li><label><input type="radio" name="q4" value="a"> `Comparable`</label></li><li><label><input type="radio" name="q4" value="b"> `Iterable`</label></li><li><label><input type="radio" name="q4" value="c"> `Cloneable`</label></li><li><label><input type="radio" name="q4" value="d"> `Comparator`</label></li></ul></div>
+        <div id="q5" class="question-block"><p class="question-text">5. The `compareTo()` method, from the `Comparable` interface, should return what value if the current object is "less than" the object being compared to?</p><ul class="options-list"><li><label><input type="radio" name="q5" value="a"> A positive integer</label></li><li><label><input type="radio" name="q5" value="b"> A negative integer</label></li><li><label><input type="radio" name="q5" value="c"> Zero</label></li><li><label><input type="radio" name="q5" value="d"> `false`</label></li></ul></div>
+        <div id="q6" class="question-block"><p class="question-text">6. Which method of the `Collections` class is used to sort a `List`?</p><ul class="options-list"><li><label><input type="radio" name="q6" value="a"> `order()`</label></li><li><label><input type="radio" name="q6" value="b"> `arrange()`</label></li><li><label><input type="radio" name="q6" value="c"> `sort()`</label></li><li><label><input type="radio" name="q6" value="d"> `sequence()`</label></li></ul></div>
+        <div id="q7" class="question-block"><p class="question-text">7. The "for-each" loop in Java can be used on any object that implements which interface?</p><ul class="options-list"><li><label><input type="radio" name="q7" value="a"> `Iterator`</label></li><li><label><input type="radio" name="q7" value="b"> `Comparable`</label></li><li><label><input type="radio" name="q7" value="c"> `Iterable`</label></li><li><label><input type="radio" name="q7" value="d"> `Comparator`</label></li></ul></div>
+        <div id="q8" class="question-block"><p class="question-text">8. What exception is typically thrown if you call the `next()` method on an `Iterator` when there are no more elements?</p><ul class="options-list"><li><label><input type="radio" name="q8" value="a"> `IllegalStateException`</label></li><li><label><input type="radio" name="q8" value="b"> `NoSuchElementException`</label></li><li><label><input type="radio" name="q8" value="c"> `ArrayIndexOutOfBoundsException`</label></li><li><label><input type="radio" name="q8" value="d"> `ConcurrentModificationException`</label></li></ul></div>
+        <div id="q9" class="question-block"><p class="question-text">9. The `compare(T o1, T o2)` method is the single abstract method of which interface?</p><ul class="options-list"><li><label><input type="radio" name="q9" value="a"> `Comparable&lt;T&gt;`</label></li><li><label><input type="radio" name="q9" value="b"> `Iterable&lt;T&gt;`</label></li><li><label><input type="radio" name="q9" value="c"> `Comparator&lt;T&gt;`</label></li><li><label><input type="radio" name="q9" value="d"> `Iterator&lt;T&gt;`</label></li></ul></div>
+        <div id="q10" class="question-block"><p class="question-text">10. In a standard `ArrayList`, what happens if you try to modify the list (e.g., add or remove an element) while iterating over it using a standard `Iterator`?</p><ul class="options-list"><li><label><input type="radio" name="q10" value="a"> The iteration continues with the updated list.</label></li><li><label><input type="radio" name="q10" value="b"> The change is ignored by the iterator.</label></li><li><label><input type="radio" name="q10" value="c"> A `ConcurrentModificationException` is thrown.</label></li><li><label><input type="radio" name="q10" value="d"> A `NullPointerException` is thrown.</label></li></ul></div>
+
+        <!-- Medium Level -->
+        <h2>Medium Level</h2>
+        <div id="q11" class="question-block"><p class="question-text">11. Consider a `Person` class with `name` and `age` fields. How would you create a `Comparator` to sort a list of `Person` objects by age in ascending order using a lambda expression?</p><ul class="options-list"><li><label><input type="radio" name="q11" value="a"> `(p1, p2) -> p1.age.compareTo(p2.age)`</label></li><li><label><input type="radio" name="q11" value="b"> `(p1, p2) -> p2.getAge() - p1.getAge()`</label></li><li><label><input type="radio" name="q11" value="c"> `(p1, p2) -> Integer.compare(p1.getAge(), p2.getAge())`</label></li><li><label><input type="radio" name="q11" value="d"> `(p1, p2) -> p1.getAge() > p2.getAge()`</label></li></ul></div>
+        <div id="q12" class="question-block"><p class="question-text">12. What is the relationship between the `Iterable` and `Iterator` interfaces?</p><ul class="options-list"><li><label><input type="radio" name="q12" value="a"> `Iterable` extends `Iterator`.</label></li><li><label><input type="radio" name="q12" value="b"> `Iterator` extends `Iterable`.</label></li><li><label><input type="radio" name="q12" value="c"> An `Iterable` object has a method that returns an `Iterator`.</label></li><li><label><input type="radio" name="q12" value="d"> They are unrelated interfaces.</label></li></ul></div>
+        <div id="q13" class="question-block"><p class="question-text">13. A class `Car` implements `Comparable<Car>` by comparing car prices. You have a `List<Car>` called `cars`. What will `Collections.sort(cars);` do?</p><ul class="options-list"><li><label><input type="radio" name="q13" value="a"> Sort the cars by price.</label></li><li><label><input type="radio" name="q13" value="b"> Throw a compilation error because no `Comparator` is provided.</label></li><li><label><input type="radio" name="q13" value="c"> Sort the cars based on their memory address.</label></li><li><label><input type="radio" name="q13" value="d"> Do nothing as the list is already sorted.</label></li></ul></div>
+        <div id="q14" class="question-block"><p class="question-text">14. Which static factory method in the `Comparator` interface is used to create a comparator from a function that extracts a `Comparable` sort key?</p><ul class="options-list"><li><label><input type="radio" name="q14" value="a"> `Comparator.of()`</label></li><li><label><input type="radio" name="q14" value="b"> `Comparator.from()`</label></li><li><label><input type="radio" name="q14" value="c"> `Comparator.comparing()`</label></li><li><label><input type="radio" name="q14" value="d"> `Comparator.naturalOrder()`</label></li></ul></div>
+        <div id="q15" class="question-block"><p class="question-text">15. If a `Comparator` returns `0` for two objects, `o1` and `o2`, what does this imply?</p><ul class="options-list"><li><label><input type="radio" name="q15" value="a"> `o1` is smaller than `o2`.</label></li><li><label><input type="radio" name="q15" value="b"> The comparator considers `o1` and `o2` to be equal for sorting purposes.</label></li><li><label><input type="radio" name="q15" value="c"> `o1` is larger than `o2`.</label></li><li><label><input type="radio" name="q15" value="d"> An error has occurred.</label></li></ul></div>
+        <div id="q16" class="question-block"><p class="question-text">16. How can you create a `Comparator` that applies a second sorting criterion if the first one results in a tie?</p><ul class="options-list"><li><label><input type="radio" name="q16" value="a"> By using the `||` operator inside the `compare` method.</label></li><li><label><input type="radio" name="q16" value="b"> By calling the `andThen()` method on the first `Comparator`.</label></li><li><label><input type="radio" name="q16" value="c"> By calling the `thenComparing()` method on the first `Comparator`.</label></li><li><label><input type="radio" name="q16" value="d"> By creating a nested `Comparator`.</label></li></ul></div>
+        <div id="q17" class="question-block"><p class="question-text">17. What is the purpose of the `Comparator.reversed()` method?</p><ul class="options-list"><li><label><input type="radio" name="q17" value="a"> It sorts the collection in place, in reverse.</label></li><li><label><input type="radio" name="q17" value="b"> It returns a comparator that imposes the reverse ordering of the original comparator.</label></li><li><label><input type="radio" name="q17" value="c"> It can only be used on collections that are already sorted.</label></li><li><label><input type="radio" name="q17" value="d"> It reverses the natural ordering of an object.</label></li></ul></div>
+        <div id="q18" class="question-block"><p class="question-text">18. You have a `List<String>`. Which code snippet correctly sorts the list by the length of the strings?</p><ul class="options-list"><li><label><input type="radio" name="q18" value="a"> `Collections.sort(list, (s1, s2) -> s1 > s2);`</label></li><li><label><input type="radio" name="q18" value="b"> `Collections.sort(list, Comparator.comparing(String::length));`</label></li><li><label><input type="radio" name="q18" value="c"> `list.sort(String::length);`</label></li><li><label><input type="radio" name="q18" value="d"> `Collections.sort(list, String::length);`</label></li></ul></div>
+        <div id="q19" class="question-block"><p class="question-text">19. When is it more appropriate to use `Comparable` instead of `Comparator`?</p><ul class="options-list"><li><label><input type="radio" name="q19" value="a"> When you need to provide multiple different ways to sort objects.</label></li><li><label><input type="radio" name="q19" value="b"> When you cannot modify the source code of the class whose objects you want to sort.</label></li><li><label><input type="radio" name="q19" value="c"> When defining a single, primary, and natural ordering for a class.</label></li><li><label><input type="radio" name="q19" value="d"> When sorting objects in descending order.</label></li></ul></div>
+        <div id="q20" class="question-block"><p class="question-text">20. What does the `Iterator.remove()` method do?</p><ul class="options-list"><li><label><input type="radio" name="q20" value="a"> Removes the element that was last returned by the `next()` method.</label></li><li><label><input type="radio" name="q20" value="b"> Removes the current element pointed to by the iterator's cursor.</label></li><li><label><input type="radio" name="q20" value="c"> Removes the first element of the collection.</label></li><li><label><input type="radio" name="q20" value="d"> Empties the entire underlying collection.</label></li></ul></div>
+
+        <!-- Hard Level -->
+        <h2>Hard Level</h2>
+        <div id="q21" class="question-block"><p class="question-text">21. Which statement best describes a "fail-fast" iterator?</p><ul class="options-list"><li><label><input type="radio" name="q21" value="a"> It works on a clone of the collection, so it doesn't see modifications made after its creation.</label></li><li><label><input type="radio" name="q21" value="b"> It is guaranteed to throw a `ConcurrentModificationException` if the collection is modified by another thread.</label></li><li><label><input type="radio" name="q21" value="c"> It makes a best-effort attempt to throw a `ConcurrentModificationException` if the collection is structurally modified after the iterator's creation.</label></li><li><label><input type="radio" name="q21" value="d"> It fails the entire application if any modification occurs during iteration.</label></li></ul></div>
+        <div id="q22" class="question-block"><p class="question-text">22. You have a class `Product` with `getCategory()` (String) and `getPrice()` (double) methods. How do you sort a list of `Product`s first by category alphabetically, and then by price in descending order?</p><ul class="options-list"><li><label><input type="radio" name="q22" value="a"> `Comparator.comparing(Product::getCategory).thenComparing(Product::getPrice).reversed()`</label></li><li><label><input type="radio" name="q22" value="b"> `Comparator.comparing(Product::getCategory).thenComparing((p1, p2) -> Double.compare(p2.getPrice(), p1.getPrice()))`</label></li><li><label><input type="radio" name="q22" value="c"> `Comparator.comparing(Product::getCategory).reversed().thenComparing(Product::getPrice)`</label></li><li><label><input type="radio" name="q22" value="d"> `Comparator.comparing(p -> p.getCategory() && p.getPrice())`</label></li></ul></div>
+        <div id="q23" class="question-block"><p class="question-text">23. What is a key difference between an `Iterator` and a `Spliterator`?</p><ul class="options-list"><li><label><input type="radio" name="q23" value="a"> `Spliterator` can only be used with `Stream`s, while `Iterator` is for `Collection`s.</label></li><li><label><input type="radio" name="q23" value="b"> `Spliterator` supports parallel traversal and processing, while `Iterator` is strictly sequential.</label></li><li><label><input type="radio" name="q23" value="c"> `Spliterator` does not have a method equivalent to `hasNext()`.</label></li><li><label><input type="radio" name="q23" value="d"> `Iterator` is a newer interface designed to replace `Spliterator`.</label></li></ul></div>
+        <div id="q24" class="question-block"><p class="question-text">24. Consider a `TreeSet` which stores elements in sorted order. If you add objects of a class that does not implement `Comparable` and you don't provide a `Comparator` to the `TreeSet` constructor, what happens?</p><ul class="options-list"><li><label><input type="radio" name="q24" value="a"> The objects are stored in insertion order.</label></li><li><label><input type="radio" name="q24" value="b"> The `TreeSet` uses the objects' hash codes for sorting.</label></li><li><label><input type="radio" name="q24" value="c"> A `ClassCastException` is thrown at runtime when the first element is added.</label></li><li><label><input type="radio" name="q24" value="d"> The code fails to compile.</label></li></ul></div>
+        <div id="q25" class="question-block"><p class="question-text">25. How would you create a `Comparator` for a `Person` class that sorts `null` `Person` objects to appear first, followed by non-null objects sorted by name?</p><ul class="options-list"><li><label><input type="radio" name="q25" value="a"> `Comparator.comparing(Person::getName, Comparator.nullsFirst())`</label></li><li><label><input type="radio" name="q25" value="b"> `Comparator.nullsFirst(Comparator.comparing(Person::getName))`</label></li><li><label><input type="radio" name="q25" value="c"> `Comparator.comparing(Person::getName).nullsFirst()`</label></li><li><label><input type="radio" name="q25" value="d"> This requires a custom lambda with an explicit null check.</label></li></ul></div>
+        <div id="q26" class="question-block"><p class="question-text">26. The contract for `Comparator.compare(o1, o2)` requires that `sgn(compare(x, y)) == -sgn(compare(y, x))`. What property does this enforce?</p><ul class="options-list"><li><label><input type="radio" name="q26" value="a"> Transitivity</label></li><li><label><input type="radio" name="q26" value="b"> Reflexivity</label></li><li><label><input type="radio" name="q26" value="c"> Antisymmetry (or Skew symmetry)</label></li><li><label><input type="radio" name="q26" value="d"> Totality</label></li></ul></div>
+        <div id="q27" class="question-block"><p class="question-text">27. Iterators for which of the following collections are typically "fail-safe" (or weakly consistent) and do not throw `ConcurrentModificationException`?</p><ul class="options-list"><li><label><input type="radio" name="q27" value="a"> `java.util.ArrayList`</label></li><li><label><input type="radio" name="q27" value="b"> `java.util.HashMap`</label></li><li><label><input type="radio" name="q27" value="c"> `java.util.concurrent.CopyOnWriteArrayList`</label></li><li><label><input type="radio" name="q27" value="d"> `java.util.HashSet`</label></li></ul></div>
+        <div id="q28" class="question-block"><p class="question-text">28. What is the purpose of the `forEachRemaining(Consumer action)` default method in the `Iterator` interface?</p><ul class="options-list"><li><label><input type="radio" name="q28" value="a"> It performs the given action for each remaining element in the iteration order.</label></li><li><label><input type="radio" name="q28" value="b"> It checks if the remaining elements match a given predicate.</label></li><li><label><input type="radio" name="q28" value="c"> It skips the remaining elements in the iterator.</label></li><li><label><input type="radio" name="q28" value="d"> It returns a new `List` containing the remaining elements.</label></li></ul></div>
+        <div id="q29" class="question-block"><p class="question-text">29. You implement `compareTo` in a way that `x.compareTo(y)` returns `0` but `x.equals(y)` returns `false`. If you add both `x` and `y` to a `TreeSet`, what will happen?</p><ul class="options-list"><li><label><input type="radio" name="q29" value="a"> Both objects will be added successfully.</label></li><li><label><input type="radio" name="q29" value="b"> The second object will not be added because `compareTo` returned `0`.</label></li><li><label><input type="radio" name="q29" value="c"> A `RuntimeException` will be thrown.</label></li><li><label><input type="radio" name="q29" value="d"> The `TreeSet` will alternate between storing `x` and `y`.</label></li></ul></div>
+        <div id="q30" class="question-block"><p class="question-text">30. Given `Comparator<String> comp = (s1, s2) -> s1.length() - s2.length();`. What is the result of sorting a list `["a", "cccc", "b"]` using `comp.thenComparing(Comparator.naturalOrder())`?</p><ul class="options-list"><li><label><input type="radio" name="q30" value="a"> `[a, b, cccc]`</label></li><li><label><input type="radio" name="q30" value="b"> `[a, cccc, b]`</label></li><li><label><input type="radio" name="q30" value="c"> `[cccc, a, b]`</label></li><li><label><input type="radio" name="q30" value="d"> `[cccc, b, a]`</label></li></ul></div>
+
+        <button id="submit-btn">Check Answers</button>
+    </div>
+
+    <script>
+        const answers = {
+            q1: 'b', q2: 'c', q3: 'd', q4: 'd', q5: 'b', q6: 'c', q7: 'c', q8: 'b', q9: 'c', q10: 'c',
+            q11: 'c', q12: 'c', q13: 'a', q14: 'c', q15: 'b', q16: 'c', q17: 'b', q18: 'b', q19: 'c', q20: 'a',
+            q21: 'c', q22: 'b', q23: 'b', q24: 'c', q25: 'b', q26: 'c', q27: 'c', q28: 'a', q29: 'b', q30: 'a'
+        };
+
+        const submitButton = document.getElementById('submit-btn');
+
+        submitButton.addEventListener('click', () => {
+            for (const questionId in answers) {
+                const correctAnswer = answers[questionId];
+                
+                const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+                const questionBlock = document.getElementById(questionId);
+                
+                // Clear previous results
+                questionBlock.classList.remove('correct', 'incorrect');
+                const existingFeedback = questionBlock.querySelector('.correct-answer-text');
+                if (existingFeedback) {
+                    existingFeedback.remove();
+                }
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        questionBlock.classList.add('correct');
+                    } else {
+                        questionBlock.classList.add('incorrect');
+                        // Show the correct answer
+                        const correctOptionLabel = document.querySelector(`input[name="${questionId}"][value="${correctAnswer}"]`).parentElement.textContent;
+                        const feedback = document.createElement('p');
+                        feedback.className = 'correct-answer-text';
+                        feedback.textContent = `Correct Answer: ${correctOptionLabel}`;
+                        questionBlock.appendChild(feedback);
+                    }
+                } else {
+                    // Mark unanswered questions as incorrect
+                    questionBlock.classList.add('incorrect');
+                }
+            }
+            window.scrollTo(0, 0); // Scroll to the top to see results
+        });
+    </script>
+
+</body>
+</html>

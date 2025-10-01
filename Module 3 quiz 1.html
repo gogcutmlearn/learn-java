@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Collection Framework Quiz</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .question-block {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .options-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .options-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .options-list li:hover {
+            background-color: #ecf0f1;
+        }
+        .options-list input[type="radio"] {
+            margin-right: 10px;
+        }
+        #submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #submit-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Styles for showing results */
+        .correct {
+            background-color: #d4edda;
+            border-left: 5px solid #28a745;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            border-left: 5px solid #dc3545;
+        }
+        .correct-answer-text {
+            font-weight: bold;
+            color: #155724;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>Java Collection Framework Quiz</h1>
+
+        <!-- Easy Level -->
+        <h2>Easy Level</h2>
+        <div id="q1" class="question-block">
+            <p class="question-text">1. Which of these is the primary interface that all collection classes in the Java Collection Framework implement?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q1" value="a"> List</label></li>
+                <li><label><input type="radio" name="q1" value="b"> Set</label></li>
+                <li><label><input type="radio" name="q1" value="c"> Map</label></li>
+                <li><label><input type="radio" name="q1" value="d"> Collection</label></li>
+            </ul>
+        </div>
+        <div id="q2" class="question-block">
+            <p class="question-text">2. What is the defining characteristic of a class that implements the `Set` interface?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q2" value="a"> It contains only unique elements.</label></li>
+                <li><label><input type="radio" name="q2" value="b"> It maintains elements in insertion order.</label></li>
+                <li><label><input type="radio" name="q2" value="c"> It allows `null` values as keys.</label></li>
+                <li><label><input type="radio" name="q2" value="d"> It stores key-value pairs.</label></li>
+            </ul>
+        </div>
+        <!-- Add remaining Easy questions here -->
+        <div id="q3" class="question-block"><p class="question-text">3. Which collection class provides an ordered collection (also called a sequence) and allows duplicate elements?</p><ul class="options-list"><li><label><input type="radio" name="q3" value="a"> java.util.HashSet</label></li><li><label><input type="radio" name="q3" value="b"> java.util.ArrayList</label></li><li><label><input type="radio" name="q3" value="c"> java.util.HashMap</label></li><li><label><input type="radio" name="q3" value="d"> java.util.TreeSet</label></li></ul></div>
+        <div id="q4" class="question-block"><p class="question-text">4. The `Map` interface is used to store what kind of data?</p><ul class="options-list"><li><label><input type="radio" name="q4" value="a"> A sequence of ordered elements.</label></li><li><label><input type="radio" name="q4" value="b"> A group of unique elements.</label></li><li><label><input type="radio" name="q4" value="c"> Key-value pairs.</label></li><li><label><input type="radio" name="q4" value="d"> The first-in, first-out elements.</label></li></ul></div>
+        <div id="q5" class="question-block"><p class="question-text">5. Which implementation of `List` is most efficient for retrieving an element by its index?</p><ul class="options-list"><li><label><input type="radio" name="q5" value="a"> ArrayList</label></li><li><label><input type="radio" name="q5" value="b"> LinkedList</label></li><li><label><input type="radio" name="q5" value="c"> Vector</label></li><li><label><input type="radio" name="q5" value="d"> Stack</label></li></ul></div>
+        <div id="q6" class="question-block"><p class="question-text">6. To add a new element to a `List` or a `Set`, which method is typically used?</p><ul class="options-list"><li><label><input type="radio" name="q6" value="a"> put(element)</label></li><li><label><input type="radio" name="q6" value="b"> insert(element)</label></li><li><label><input type="radio" name="q6" value="c"> add(element)</label></li><li><label><input type="radio" name="q6" value="d"> push(element)</label></li></ul></div>
+        <div id="q7" class="question-block"><p class="question-text">7. Which `Set` implementation stores its elements in a hash table and does not guarantee any order of iteration?</p><ul class="options-list"><li><label><input type="radio" name="q7" value="a"> TreeSet</label></li><li><label><input type="radio" name="q7" value="b"> LinkedHashSet</label></li><li><label><input type="radio" name="q7" value="c"> HashSet</label></li><li><label><input type="radio" name="q7" value="d"> EnumSet</label></li></ul></div>
+        <div id="q8" class="question-block"><p class="question-text">8. How do you retrieve a value from a `Map` if you know its corresponding key?</p><ul class="options-list"><li><label><input type="radio" name="q8" value="a"> getValue(key)</label></li><li><label><input type="radio" name="q8" value="b"> fetch(key)</label></li><li><label><input type="radio" name="q8" value="c"> get(key)</label></li><li><label><input type="radio" name="q8" value="d"> find(key)</label></li></ul></div>
+        <div id="q9" class="question-block"><p class="question-text">9. Which interface represents a collection that orders elements in a FIFO (First-In, First-Out) manner?</p><ul class="options-list"><li><label><input type="radio" name="q9" value="a"> Stack</label></li><li><label><input type="radio" name="q9" value="b"> Set</label></li><li><label><input type="radio" name="q9" value="c"> Map</label></li><li><label><input type="radio" name="q9" value="d"> Queue</label></li></ul></div>
+        <div id="q10" class="question-block"><p class="question-text">10. What does the `size()` method of a collection return?</p><ul class="options-list"><li><label><input type="radio" name="q10" value="a"> The capacity of the collection.</label></li><li><label><input type="radio" name="q10" value="b"> The number of elements currently in the collection.</label></li><li><label><input type="radio" name="q10" value="c"> The amount of memory the collection is using.</label></li><li><label><input type="radio" name="q10" value="d"> The maximum number of elements the collection can hold.</label></li></ul></div>
+
+        <!-- Medium Level -->
+        <h2>Medium Level</h2>
+        <div id="q11" class="question-block"><p class="question-text">11. For which of the following operations is `LinkedList` generally more efficient than `ArrayList`?</p><ul class="options-list"><li><label><input type="radio" name="q11" value="a"> Getting an element at a specific index.</label></li><li><label><input type="radio" name="q11" value="b"> Iterating over the elements in sequence.</label></li><li><label><input type="radio" name="q11" value="c"> Adding or removing elements from the middle of the list.</label></li><li><label><input type="radio" name="q11" value="d"> Replacing an element at a specific index.</label></li></ul></div>
+        <div id="q12" class="question-block"><p class="question-text">12. What is the main difference between a `HashSet` and a `TreeSet`?</p><ul class="options-list"><li><label><input type="radio" name="q12" value="a"> `HashSet` allows duplicates, while `TreeSet` does not.</label></li><li><label><input type="radio" name="q12" value="b"> `HashSet` does not maintain order, while `TreeSet` keeps elements sorted.</label></li><li><label><input type="radio" name="q12" value="c"> `HashSet` can store `null` values, while `TreeSet` cannot.</label></li><li><label><input type="radio" name="q12" value="d"> `HashSet` is synchronized, while `TreeSet` is not.</label></li></ul></div>
+        <div id="q13" class="question-block"><p class="question-text">13. If you want to store key-value pairs and iterate through them in the sorted order of their keys, which `Map` implementation should you use?</p><ul class="options-list"><li><label><input type="radio" name="q13" value="a"> HashMap</label></li><li><label><input type="radio" name="q13" value="b"> LinkedHashMap</label></li><li><label><input type="radio" name="q13" value="c"> TreeMap</label></li><li><label><input type="radio" name="q13" value="d"> Hashtable</label></li></ul></div>
+        <div id="q14" class="question-block"><p class="question-text">14. What happens if you try to add a duplicate element to a `HashSet`?</p><ul class="options-list"><li><label><input type="radio" name="q14" value="a"> It throws a `DuplicateElementException`.</label></li><li><label><input type="radio" name="q14" value="b"> The `add()` method returns `false` and the set is not modified.</label></li><li><label><input type="radio" name="q14" value="c"> The existing element is replaced with the new one.</label></li><li><label><input type="radio" name="q14" value="d"> The `add()` method returns `true` but the element is not added.</label></li></ul></div>
+        <div id="q15" class="question-block"><p class="question-text">15. Which two methods must be correctly implemented for a custom object to be used as a key in a `HashMap`?</p><ul class="options-list"><li><label><input type="radio" name="q15" value="a"> `equals()` and `compareTo()`</label></li><li><label><input type="radio" name="q15" value="b"> `hashCode()` and `toString()`</label></li><li><label><input type="radio" name="q15" value="c"> `equals()` and `hashCode()`</label></li><li><label><input type="radio" name="q15" value="d"> `getKey()` and `getValue()`</label></li></ul></div>
+        <div id="q16" class="question-block"><p class="question-text">16. Which collection class maintains the insertion order of elements?</p><ul class="options-list"><li><label><input type="radio" name="q16" value="a"> `HashSet`</label></li><li><label><input type="radio" name="q16" value="b"> `ArrayList`</label></li><li><label><input type="radio" name="q16" value="c"> `TreeSet`</label></li><li><label><input type="radio" name="q16" value="d"> `PriorityQueue`</label></li></ul></div>
+        <div id="q17" class="question-block"><p class="question-text">17. What is a `Deque`?</p><ul class="options-list"><li><label><input type="radio" name="q17" value="a"> A queue that blocks when empty.</label></li><li><label><input type="radio" name="q17" value="b"> A collection that only stores unique elements.</label></li><li><label><input type="radio" name="q17" value="c"> A "double-ended queue" that supports element insertion and removal at both ends.</label></li><li><label><input type="radio" name="q17" value="d"> A legacy version of the `Queue` interface.</label></li></ul></div>
+        <div id="q18" class="question-block"><p class="question-text">18. The `java.util.Collections` class contains:</p><ul class="options-list"><li><label><input type="radio" name="q18" value="a"> Base interfaces like `List` and `Set`.</label></li><li><label><input type="radio" name="q18" value="b"> Concrete implementations like `ArrayList` and `HashSet`.</label></li><li><label><input type="radio" name="q18" value="c"> Abstract classes that help in creating custom collections.</label></li><li><label><input type="radio" name="q18" value="d"> Static utility methods for operating on collections.</label></li></ul></div>
+        <div id="q19" class="question-block"><p class="question-text">19. Which of the following is true about the keys in any `Map` implementation?</p><ul class="options-list"><li><label><input type="radio" name="q19" value="a"> They must be strings.</label></li><li><label><input type="radio" name="q19" value="b"> They must all be unique.</label></li><li><label><input type="radio" name="q19" value="c"> They are always sorted.</label></li><li><label><input type="radio" name="q19" value="d"> They allow duplicates.</label></li></ul></div>
+        <div id="q20" class="question-block"><p class="question-text">20. If you iterate over a `LinkedHashMap`, in what order will you retrieve its entries?</p><ul class="options-list"><li><label><input type="radio" name="q20" value="a"> In the sorted order of the keys.</label></li><li><label><input type="radio" name="q20" value="b"> In the natural order of the values.</label></li><li><label><input type="radio" name="q20" value="c"> In the order in which the entries were inserted.</label></li><li><label><input type="radio" name="q20" value="d"> The order is not guaranteed.</label></li></ul></div>
+        
+        <!-- Hard Level -->
+        <h2>Hard Level</h2>
+        <div id="q21" class="question-block"><p class="question-text">21. What is the primary underlying data structure for a `HashMap` in Java 8 and later?</p><ul class="options-list"><li><label><input type="radio" name="q21" value="a"> A linked list of entries.</label></li><li><label><input type="radio" name="q21" value="b"> A balanced binary search tree.</label></li><li><label><input type="radio" name="q21" value="c"> An array of nodes, where each node can be a linked list or a balanced tree.</label></li><li><label><input type="radio" name="q21" value="d"> A hash table implemented with open addressing.</label></li></ul></div>
+        <div id="q22" class="question-block"><p class="question-text">22. Which collection is considered thread-safe and is highly optimized for concurrent read operations?</p><ul class="options-list"><li><label><input type="radio" name="q22" value="a"> `Hashtable`</label></li><li><label><input type="radio" name="q22" value="b"> `Collections.synchronizedList(new ArrayList<>())`</label></li><li><label><input type="radio" name="q22" value="c"> `Vector`</label></li><li><label><input type="radio" name="q22" value="d"> `CopyOnWriteArrayList`</label></li></ul></div>
+        <div id="q23" class="question-block"><p class="question-text">23. Under what condition is an entry removed from a `WeakHashMap`?</p><ul class="options-list"><li><label><input type="radio" name="q23" value="a"> When a specified time-to-live expires.</label></li><li><label><input type="radio" name="q23" value="b"> When its value is `null`.</label></li><li><label><input type="radio" name="q23" value="c"> When its key becomes weakly reachable (i.e., no strong references to it exist).</label></li><li><label><input type="radio" name="q23" value="d"> When the map exceeds its initial capacity.</label></li></ul></div>
+        <div id="q24" class="question-block"><p class="question-text">24. What is the main performance advantage of `ArrayDeque` over `LinkedList` when used as a `Stack` or `Queue`?</p><ul class="options-list"><li><label><input type="radio" name="q24" value="a"> `ArrayDeque` is synchronized.</label></li><li><label><input type="radio" name="q24" value="b"> `ArrayDeque` has no capacity limit.</label></li><li><label><input type="radio" name="q24" value="c"> `ArrayDeque` uses a resizable array, offering better locality of reference.</label></li><li><label><input type="radio" name="q24" value="d"> `ArrayDeque` allows `null` elements.</label></li></ul></div>
+        <div id="q25" class="question-block"><p class="question-text">25. How does an `IdentityHashMap` differ from a regular `HashMap` when checking for key equality?</p><ul class="options-list"><li><label><input type="radio" name="q25" value="a"> It uses the `compareTo()` method.</label></li><li><label><input type="radio" name="q25" value="b"> It uses reference equality (`==`) instead of object equality (`equals()`).</label></li><li><label><input type="radio" name="q25" value="c"> It converts all keys to their `String` representation.</label></li><li><label><input type="radio" name="q25" value="d"> It ignores the `hashCode()` of the keys.</label></li></ul></div>
+        <div id="q26" class="question-block"><p class="question-text">26. What is a key feature of the `BlockingQueue` interface?</p><ul class="options-list"><li><label><input type="radio" name="q26" value="a"> It automatically blocks all write operations.</label></li><li><label><input type="radio" name="q26" value="b"> It provides methods that wait for space to become available on insertion or for an element to appear on removal.</label></li><li><label><input type="radio" name="q26" value="c"> It is a read-only queue.</label></li><li><label><input type="radio" name="q26" value="d"> It sorts elements based on a priority system.</label></li></ul></div>
+        <div id="q27" class="question-block"><p class="question-text">27. The `NavigableSet` interface provides methods like `floor()`, `ceiling()`, `higher()`, and `lower()`. What do these methods do?</p><ul class="options-list"><li><label><input type="radio" name="q27" value="a"> Modify the internal structure of the set.</label></li><li><label><input type="radio" name="q27" value="b"> Provide close-match searching for elements.</label></li><li><label><input type="radio" name="q27" value="c"> Round numeric elements up or down.</label></li><li><label><input type="radio" name="q27" value="d"> Control the memory layout of the set.</label></li></ul></div>
+        <div id="q28" class="question-block"><p class="question-text">28. Why is `EnumSet` a highly efficient `Set` implementation for `enum` types?</p><ul class="options-list"><li><label><input type="radio" name="q28" value="a"> It uses a hash table specifically designed for enums.</label></li><li><label><input type="radio" name="q28" value="b"> It is internally represented as a bit vector.</label></li><li><label><input type="radio" name="q28" value="c"> It uses a balanced tree structure.</label></li><li><label><input type="radio" name="q28" value="d"> It is fully synchronized at the hardware level.</label></li></ul></div>
+        <div id="q29" class="question-block"><p class="question-text">29. What is a key performance difference between `ConcurrentHashMap` and a map created with `Collections.synchronizedMap()`?</p><ul class="options-list"><li><label><input type="radio" name="q29" value="a"> `ConcurrentHashMap` is always faster for all operations.</label></li><li><label><input type="radio" name="q29" value="b"> `synchronizedMap` locks the entire map for any operation, while `ConcurrentHashMap` uses lock striping for higher concurrency.</label></li><li><label><input type="radio" name="q29" value="c"> `ConcurrentHashMap` does not allow `null` keys or values, while `synchronizedMap` does.</label></li><li><label><input type="radio" name="q29" value="d"> There is no significant performance difference; they are interchangeable.</label></li></ul></div>
+        <div id="q30" class="question-block"><p class="question-text">30. What happens if you add an object to a `TreeSet` that does not implement the `Comparable` interface (and no `Comparator` is provided)?</p><ul class="options-list"><li><label><input type="radio" name="q30" value="a"> The object is added, but the set's order becomes undefined.</label></li><li><label><input type="radio" name="q30" value="b"> It throws a `NullPointerException` at compile time.</label></li><li><label><input type="radio" name="q30" value="c"> It throws a `ClassCastException` at runtime.</label></li><li><label><input type="radio" name="q30" value="d"> The `add` method returns `false`.</label></li></ul></div>
+
+
+        <button id="submit-btn">Check Answers</button>
+    </div>
+
+    <script>
+        const answers = {
+            q1: 'd', q2: 'a', q3: 'b', q4: 'c', q5: 'a', q6: 'c', q7: 'c', q8: 'c', q9: 'd', q10: 'b',
+            q11: 'c', q12: 'b', q13: 'c', q14: 'b', q15: 'c', q16: 'b', q17: 'c', q18: 'd', q19: 'b', q20: 'c',
+            q21: 'c', q22: 'd', q23: 'c', q24: 'c', q25: 'b', q26: 'b', q27: 'b', q28: 'b', q29: 'b', q30: 'c'
+        };
+
+        const submitButton = document.getElementById('submit-btn');
+
+        submitButton.addEventListener('click', () => {
+            // Loop through each question in the answers object
+            for (const questionId in answers) {
+                const correctAnswer = answers[questionId];
+                
+                // Find the selected radio button for the current question
+                const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+                const questionBlock = document.getElementById(questionId);
+                
+                // Clear previous results and styles
+                questionBlock.classList.remove('correct', 'incorrect');
+                const existingFeedback = questionBlock.querySelector('.correct-answer-text');
+                if (existingFeedback) {
+                    existingFeedback.remove();
+                }
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        questionBlock.classList.add('correct');
+                    } else {
+                        questionBlock.classList.add('incorrect');
+                        // Show the correct answer
+                        const correctOptionLabel = document.querySelector(`input[name="${questionId}"][value="${correctAnswer}"]`).parentElement.textContent;
+                        const feedback = document.createElement('p');
+                        feedback.className = 'correct-answer-text';
+                        feedback.textContent = `Correct Answer: ${correctOptionLabel}`;
+                        questionBlock.appendChild(feedback);
+                    }
+                } else {
+                    // If no answer was selected, mark it as incorrect
+                    questionBlock.classList.add('incorrect');
+                }
+            }
+            window.scrollTo(0,0); // Scroll to the top to see the results from the beginning
+        });
+    </script>
+
+</body>
+</html>
